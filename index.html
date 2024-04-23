@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/dist/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="assets/images/CoffeeLove.svg" alt="logo" />
+      <nav class="primary-nav">
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+      </nav>
+      <div class="search-area">
+        <label for="search-field"
+          ><input
+            type="text"
+            name="coffee"
+            id="search-field"
+            placeholder="Cold Brew" />
+          <img
+            class="search-icon"
+            src="assets/images/icons-search.png"
+            alt="search"
+        /></label>
+        <img src="assets/images/icons-cart.png" alt="cart" />
+      </div>
+      <img
+        class="menu-icon"
+        src="assets/images/menu-hamburger.svg"
+        alt="menu"
+      />
+    </header>
+    <main>
+      <section class="intro">
+        <div class="intro-text">
+          <h1>
+            The <span>coffee</span> you will fall in <span>love</span> with
+          </h1>
+          <p>
+            Sip, Savor, and spread the love - where every cup is a caffeinated
+            hug at our cozy coffe haven!
+          </p>
+          <button class="order-button">
+            Order now <img src="assets/images/order-cart.svg" alt="cart" />
+          </button>
+        </div>
+        <div class="hero-div">
+          <img src="assets/images/hero-coffee.png" alt="coffee" />
+        </div>
+      </section>
+      <section class="menu">
+        <div class="menu-nav-wrapper">
+          <nav class="menu-navigation">
+            <ul>
+              <li>
+                <img src="assets/images/hot-coffee.png" alt="hot coffee" />
+                <a href="#"><span>hot coffee</span></a>
+              </li>
+              <li>
+                <img src="assets/images/cold-coffee.png" alt="cold coffee" />
+                <a href="#" class="selected"><span>cold coffee</span></a>
+              </li>
+              <li>
+                <img src="assets/images/tea.png" alt="tea" />
+                <a href="#"><span>tea</span></a>
+              </li>
+              <li>
+                <img src="assets/images/dessert.png" alt="dessert" />
+                <a href="#"><span>dessert</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <h2 class="title">Cold <span>Coffee</span></h2>
+
+        <div class="flex-layout">
+          <button class="back">
+            <img src="/assets/images/ion--chevron-back-sharp.svg" alt="back" />
+          </button>
+          <article class="card">
+            <img
+              src="assets/images/menu_item_1.png"
+              alt="Caramel Frappé"
+              class="coffee-img"
+            />
+            <h3 class="coffee-name">Caramel Frappé</h3>
+            <p class="coffee-text">
+              A delightful and indulgent icy beverage blending rich coffee,
+              milk, ice, and sweet caramel syrup, creating a smooth and
+              satisfying treat with a perfect harmony of caffeine and sweetness.
+            </p>
+            <div>
+              <span class="coffee-price">$8.60</span><button>Order now</button>
+            </div>
+          </article>
+
+          <article class="card highlight">
+            <img
+              src="assets/images/menu_item_2.png"
+              alt="Macchiato"
+              class="coffee-img"
+            />
+            <h3 class="coffee-name">Macchiato</h3>
+            <p class="coffee-text">
+              An espresso-based coffee characterized by a perfect balance of
+              bold, concentrated espresso and a touch of velvety steamed milk,
+              creating a nuanced and flavorful experience.
+            </p>
+            <div>
+              <span class="coffee-price">$8.60</span><button>Order now</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="assets/images/menu_item_3.png"
+              alt="Affogato"
+              class="coffee-img"
+            />
+            <h3 class="coffee-name">Affogato</h3>
+            <p class="coffee-text">
+              Delectable Italian beverage featuring a scoop of creamy vanilla
+              gelato or ice cream "drowned" or "affogato" in a shot of hot
+              espresso, creating a delightful contrast of temperatures and
+              flavors.
+            </p>
+            <div>
+              <span class="coffee-price">$11.40</span><button>Order now</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="assets/images/menu_item_4.png"
+              alt="Cold Brew"
+              class="coffee-img"
+            />
+            <h3 class="coffee-name">Cold Brew</h3>
+            <p class="coffee-text">
+              Smooth and concentrated coffee beverage crafted by steeping
+              coarsely ground coffee beans in cold water for an extended period,
+              resulting in a refreshing and less acidic brew that can be enjoyed
+              over ice.
+            </p>
+            <div>
+              <span class="coffee-price">$6.40</span><button>Order now</button>
+            </div>
+          </article>
+          <button class="forward">
+            <img
+              src="assets/images/ion--chevron-forward-sharp.svg"
+              alt="forward"
+            />
+          </button>
+        </div>
+      </section>
+      <section class="signup-section">
+        <div>
+          <img class="star-img" src="assets/images/pepicons-pop--star-circle.svg" alt="star" />
+          <div>
+            <h2>Sign up to our coffee reward program!</h2>
+            <a href="#"
+              >Learn More
+              <img
+                src="assets/images/tabler--arrow-right.svg"
+                alt="arrow right"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="special-menu">
+        <h2 class="title">Special menu <span>for you</span></h2>
+
+        <div class="grid-layout">
+          <article class="special-card">
+            <img src="assets/images/menu_item_2.png" alt="Macchiato" />
+            <h3>Macchiato</h3>
+            <div>
+              <span>$8.60</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img
+              class="inverted"
+              src="assets/images/menu_item_1.png"
+              alt="Caramel Frappé"
+            />
+            <h3>Caramel Frappé</h3>
+            <div>
+              <span>$9.20</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img src="assets/images/menu_item_5.png" alt="Macha Latte" />
+            <h3>Macha Latte</h3>
+            <div>
+              <span>$11.40</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img src="assets/images/menu_item_6.png" alt="Hot Chocolate" />
+            <h3>Hot Chocolate</h3>
+            <div>
+              <span>$6.40</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img src="assets/images/menu_item_7.png" alt="Fruit Tea" />
+            <h3>Fruit Tea</h3>
+            <div>
+              <span>$8.60</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img src="assets/images/menu_item_8.png" alt="Cappacino" />
+            <h3>Cappacino</h3>
+            <div>
+              <span>$9.20</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img src="assets/images/menu_item_3.png" alt="Affogato" />
+            <h3>Affogato</h3>
+            <div>
+              <span>$11.40</span>
+              <button>Order now</button>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <img src="assets/images/menu_item_4.png" alt="Cold Brew" />
+            <h3>Cold Brew</h3>
+            <div>
+              <span>$6.40</span>
+              <button>Order now</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div>
+          <div class="img-container">
+            <img src="assets/images/attendant.avif" alt="attendant" />
+          </div>
+          <div class="texts">
+            <h2 class="title">About <span>us</span></h2>
+            <p class="subtitle">Sip into Perfection</p>
+            <p>
+              Our Coffee World, where passion meets precision in every brew,
+              bringing you a symphony of flavors and a journey through the rich,
+              aromatic realms of coffee craftsmanship.
+            </p>
+            <button>Start Your Order</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="social-links">
+        <a class="logo-link" href="#"
+          ><img
+            class="logo"
+            src="assets/images/CoffeeLove.svg"
+            alt="CoffeeLove"
+          />
+          Coffee Love</a
+        >
+        <ul class="hidden">
+          <li>
+            <a href="#"
+              ><img src="assets/images/facebook_logo.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/instagram-logo.png" alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/twitter-logo.png" alt="Twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="more-links">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
+        </nav>
+        <div class="newsletter">
+          <form>
+            <label for="email">
+              <strong>Newsletter</strong>
+              <input type="email" placeholder="Your Email" id="email"
+            /></label>
+            <button class="submit-btn">Subscribe</button>
+          </form>
+        </div>
+        <ul class="hidden">
+          <li>
+            <a href="#"
+              ><img src="assets/images/facebook_logo.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/instagram-logo.png" alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/twitter-logo.png" alt="Twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

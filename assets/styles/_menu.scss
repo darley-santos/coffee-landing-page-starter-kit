@@ -1,0 +1,154 @@
+.menu {
+  .menu-nav-wrapper {
+    @include container(auto);
+    @include flexJustifyCenter(row);
+    margin: 10.5rem auto 3rem;
+    border-radius: 3rem;
+    padding-block: 2rem;
+    background-color: $secondary-background;
+
+    .menu-navigation {
+      ul {
+        @include flexJustifyCenter(row);
+        align-items: center;
+        gap: clamp(0rem, 8vw, 18rem);
+
+        li {
+          @include flexJustifyCenter(column);
+          align-items: center;
+          gap: 0.5rem;
+
+          a {
+            text-align: center;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $text;
+
+            &.selected,
+            &:hover {
+              @include transition(color);
+              color: $btn-background;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .flex-layout {
+    @include flexJustifyCenter(row);
+    position: relative;
+    gap: 1rem;
+    padding-block: clamp(2.5rem, 5vw, 3rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      @include cardLayout(1rem);
+      @include flexJustifyCenter(column);
+      width: max(17rem, min(6rem, 50%));
+      scroll-snap-align: start;
+
+      h3 {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .coffee-text {
+        font-size: 0.9rem;
+        margin: 0.5rem 0 1rem;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .coffee-price {
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+
+        button {
+          @include orderButton();
+        }
+      }
+
+      &.highlight {
+        transform: scaleY(1.1);
+        background-color: $accent-color;
+
+        *:not(button) {
+          color: $card-background;
+        }
+      }
+    }
+  }
+
+  .back,
+  .forward {
+    position: absolute;
+    top: 50%;
+    transform: -50%;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px #0000002c;
+    z-index: 2;
+    cursor: pointer;
+    background-color: $main-background;
+
+    img {
+      height: 2rem;
+      vertical-align: middle;
+    }
+  }
+
+  .back {
+    left: 4rem;
+  }
+  .forward {
+    right: 4rem;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .menu {
+    .menu-nav-wrapper {
+      min-width: 100%;
+      border-radius: 0;
+      margin: 0;
+
+      .menu-navigation {
+        ul {
+          justify-content: center;
+          gap: 2rem;
+          flex-wrap: wrap;
+
+          li {
+            min-width: 40%;
+          }
+        }
+      }
+    }
+
+    .flex-layout {
+      justify-content: start;
+    }
+
+    .back,
+    .forward {
+      display: none;
+    }
+  }
+}

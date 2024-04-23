@@ -1,0 +1,83 @@
+.intro {
+  @include container(auto);
+  display: flex;
+  align-items: center;
+  padding: 5rem 0 0;
+
+  .intro-text {
+    min-width: 50%;
+
+    h1 {
+      font-size: clamp(1rem, 8vw, 3.2rem);
+      color: $text;
+
+      span {
+        color: $accent-color;
+      }
+    }
+
+    p {
+      width: min(410px, 100%);
+      font-size: 1.2rem;
+      margin-block: 1rem;
+      color: $text;
+    }
+
+    .order-button {
+      width: min(10rem, 100%);
+      height: 2.7rem;
+      gap: 1rem;
+      border: none;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      color: $main-background;
+      background-color: $text;
+
+      &:hover {
+        @include transition(background-color);
+        background-color: $accent-color;
+      }
+
+      &:hover > img {
+        @include transition(background-color);
+        background-color: $card-background;
+      }
+
+      img {
+        padding: 2px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background-color: $accent-color;
+      }
+    }
+  }
+
+  .hero-div {
+    img {
+      width: min(25rem, 70%);
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .intro {
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    min-width: 100%;
+    padding: 0;
+
+    .intro-text {
+      padding: 1.5rem;
+      background-color: $main-background;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .hero-div {
+      @include flexJustifyCenter(row);
+    }
+  }
+}

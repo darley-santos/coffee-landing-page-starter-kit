@@ -1,0 +1,72 @@
+.about-section {
+  @extend .signup-section;
+
+  & > div {
+    @include container(auto);
+    display: flex;
+    gap: 2rem;
+
+    .img-container {
+      min-width: 47%;
+
+      img {
+        width: min(29rem, 100%);
+        border-radius: 10px;
+        border: 3px solid $main-background;
+      }
+    }
+
+    div {
+      .title {
+        margin: 0;
+      }
+
+      .subtitle {
+        margin: 1.5rem 0 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      p:not(.subtitle) {
+        font-size: 1.1rem;
+        color: $text;
+      }
+
+      button {
+        height: 2.2rem;
+        width: min(9rem, 100%);
+        margin-top: 1.5rem;
+        border: none;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: $accent-color;
+        background-color: $text;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .about-section {
+    & > div {
+      flex-direction: column;
+
+      .img-container {
+        img {
+          width: 18rem;
+        }
+      }
+
+      div {
+        padding-left: 1.5rem;
+
+        p:not(.subtitle) {
+          color: gray;
+        }
+      }
+    }
+  }
+}

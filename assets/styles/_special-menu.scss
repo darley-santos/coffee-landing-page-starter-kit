@@ -1,0 +1,58 @@
+.special-menu {
+  .grid-layout {
+    @include container(auto, 100%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .special-card {
+      @include cardLayout(clamp(0.5rem, 2vw, 1rem));
+
+      img {
+        width: 231px;
+      }
+
+      h3 {
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.3rem;
+
+        span {
+          font-size: 1.2rem;
+          display: inline-block;
+          font-weight: 700;
+        }
+
+        button {
+          @include orderButton();
+        }
+      }
+
+      &:has(button:active) {
+        background-color: $accent-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .special-menu {
+    .grid-layout {
+      padding-left: 1rem;
+    }
+  }
+}

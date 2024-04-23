@@ -1,0 +1,42 @@
+@mixin container(
+  $margin,
+  $container-width-percentage: 95%,
+  $max-width: 1150px
+) {
+  width: min(max(300px, $container-width-percentage), $max-width);
+  margin: $margin;
+}
+
+@mixin transition($rule1, $rule2: none) {
+  transition: $rule1 0.1s linear;
+
+  @if $rule2 != none {
+    transition: $rule1, $rule2 0.2s linear;
+  }
+}
+
+@mixin flexJustifyCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+}
+
+@mixin cardLayout($padding) {
+  padding: $padding;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  color: $main-background;
+  background-color: $card-background;
+}
+
+@mixin orderButton() {
+  height: 2.3rem;
+  width: min(7.2rem, 100%);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: $main-background;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: $btn-background;
+}

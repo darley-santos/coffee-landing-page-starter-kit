@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+@import "variables";
+@import "mixins";
+@import "header";
+@import "intro-section";
+@import "menu";
+@import "signup-section";
+@import "special-menu";
+@import "about-section";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 120vh;
+    width: 35%;
+    z-index: -2;
+    background-color: $accent-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: -2;
+    pointer-events: none;
+    background: url(../images/hero-coffee-beans.png) no-repeat 100% 0;
+  }
+}
+.logo {
+  width: 4.5rem;
+  vertical-align: middle;
+}
+.title {
+  @include container(auto);
+  margin-block: 1rem;
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  letter-spacing: 1px;
+
+  span {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 4px;
+      width: 100%;
+      border-radius: 1rem;
+      background-color: $accent-color;
+    }
+  }
+}
+.inverted {
+  transform: scaleX(-1);
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: $mobile-width) {
+  body {
+    &::before {
+      width: 50%;
+      height: 30rem;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .title {
+    margin-left: 1.5rem;
+  }
+
+  .hidden {
+    display: flex;
+    margin: auto;
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+}
