@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 .header {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@
   }
 }
 .intro {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
   display: flex;
   align-items: center;
@@ -134,7 +134,7 @@
   }
 }
 .menu .menu-nav-wrapper {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -287,7 +287,7 @@
   background-color: #f6ebda;
 }
 .signup-section > div, .about-section > div {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
   display: flex;
   align-items: center;
@@ -327,7 +327,7 @@
   }
 }
 .special-menu .grid-layout {
-  width: min(max(300px, 100%), 1150px);
+  width: min(max(300px, 100%), 1440px);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -386,7 +386,7 @@
   }
 }
 .about-section > div {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
   display: flex;
   gap: 2rem;
@@ -440,7 +440,7 @@
   }
 }
 footer {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
 }
 footer .social-links {
@@ -571,7 +571,7 @@ body::after {
 }
 
 .title {
-  width: min(max(300px, 95%), 1150px);
+  width: min(max(300px, 95%), 1440px);
   margin: auto;
   margin-block: 1rem;
   white-space: nowrap;

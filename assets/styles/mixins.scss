@@ -1,7 +1,7 @@
 @mixin container(
   $margin,
   $container-width-percentage: 95%,
-  $max-width: 1150px
+  $max-width: 1440px
 ) {
   width: min(max(300px, $container-width-percentage), $max-width);
   margin: $margin;
